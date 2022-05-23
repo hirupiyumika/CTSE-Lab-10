@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: run shell script
-    - run: echo commit hash is ${{ github.sha }}
+      run: echo commit hash is ${{ github.sha }}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:${{ steps.vars.outputs.sha_short }}
